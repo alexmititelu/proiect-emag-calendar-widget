@@ -15,24 +15,26 @@
 }
 
 .calendar .header .previousMonth {
-    display: inline-block;
+    /* display: inline-block; */
+    cursor: pointer;
     margin-left:10px;
     /* position: absolute; */
     float:left;
 }
 
-.calendar .header .monthDisplayed {
+.calendar .header .calendarMonth {
     display: inline-block;
-    margin-top: 7px;
     /* margin-left: 18%; */
     /* margin-right:18%; */
     
     /* margin-left: auto;
     margin-right: auto; */
     letter-spacing: 0.2px;
+    margin-top: 7px;
 }
 
 .calendar .header .nextMonth {
+    cursor: pointer;
     /* display:inline-block; */
     /* padding-right: 10px; */
     /* position: absolute; */
@@ -48,7 +50,7 @@
 .dayName {
     width: 27px;
     font-size: 13px;
-    display: block;
+    display: inline-block;
     /* padding: 0.2px; */
     /* margin-right: 2px; */
 }

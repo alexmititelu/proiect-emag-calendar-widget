@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="calendar.css" />
-    <script src="calendar.js"></script>
+    <!-- <script src="calendar.js"></script> -->
 </head>
 <body>
     <h2> Vom prezenta un widget cu un calendar pentru Emag </h2>
@@ -15,9 +15,9 @@
 
     <div class = "calendar" >
         <div class = "header">
-                <i class="fa fa-angle-left fa-2x previousMonth"></i>
-                <span class="monthDisplayed"> MAY 2018 </span>
-                <i class="fa fa-angle-right fa-2x nextMonth"></i>
+                <i class="fa fa-angle-left fa-2x previousMonth" onclick="switchToPreviousMonth()"></i>
+                <span id="monthDisplayed" class="calendarMonth"></span>
+                <i class="fa fa-angle-right fa-2x nextMonth" onclick="switchToNextMonth()"></i>
                 
         </div>
         <table class = "dayNames">
@@ -31,7 +31,7 @@
             <td class="dayName">Sun</td>
         </tr>
         </table>
-        <table class = "calendarContent">
+        <table id = "calendarContentID" class = "calendarContent">
             <tr>
                 <td>1</td>
                 <td>2</td>
@@ -72,13 +72,32 @@
                 <td>29</td>
                 <td>30</td>
                 <td>31</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
             </tr>
+            <tr id="lastCalendarRow">
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
         </table>
     </div>
+
+    <script type="text/javascript" src="calendar.js">
+        // let currentDate = new Date();
+        // // document.getElementById("monthDisplayed").innerHtml = "TEST";
+        // // // document.getElementById"monthDisplayed").textContent = "TEST";
+        // months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; 
+        // span = document.getElementById("monthDisplayed");
+        // txt = document.createTextNode(months[currentDate.getMonth()-1] + " " + currentDate.getFullYear());
+        // span.appendChild(txt);
+    </script>
     
 </body>
 </html>
