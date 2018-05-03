@@ -1,5 +1,4 @@
-// window.alert = function ( text ) { console.log( 'tried to alert: ' + text ); return true; };
-// window.alert = function(){};
+
 
 var time = new Date();
 var hour = time.getHours();
@@ -86,6 +85,10 @@ locationValue = '';
         element.appendChild(locationValue);
         console.log(city.short_name);    
 
+        var weather = document.getElementById("weatherValue");
+        weather.innerHTML =  '28°';
+        weather();
+
         } else {
             alert("No results found");
         }
@@ -94,7 +97,6 @@ locationValue = '';
         }
     });
     }
-
 
     function weather() {
 
@@ -111,7 +113,9 @@ locationValue = '';
     
       });
     }
+   
     
-      weather();
+     // weather();
     
     
+   

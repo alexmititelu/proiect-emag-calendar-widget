@@ -95,7 +95,7 @@
         for(i=indexOfFirstDayOfTheMonth;i<7;i++) {
             firstRow.children[i].textContent = dayValue;
             if(currentDayShown == true && currentDayValue == dayValue) {
-                firstRow.children[i].style.border = '2px solid blue';
+                firstRow.children[i].style.border = '2px solid black';
                 firstRow.children[i].style.fontWeight = 'bold';    
             }  else {
                 firstRow.children[i].style = null;
@@ -107,7 +107,7 @@
         for(i=0;i<7;i++) {
             secondRow.children[i].textContent = dayValue;
             if(currentDayShown == true && currentDayValue == dayValue) {
-                secondRow.children[i].style.border = '2px solid blue';
+                secondRow.children[i].style.border = '2px solid black';
                 secondRow.children[i].style.fontWeight = 'bold';    
             }    else {
                 secondRow.children[i].style = null;
@@ -119,7 +119,7 @@
         for(i=0;i<7;i++) {
             thirdRow.children[i].textContent = dayValue;
             if(currentDayShown == true && currentDayValue == dayValue) {
-                thirdRow.children[i].style.border = '2px solid blue';
+                thirdRow.children[i].style.border = '2px solid black';
                 thirdRow.children[i].style.fontWeight = 'bold';    
             }  else {
                 thirdRow.children[i].style = null;
@@ -130,7 +130,7 @@
         for(i=0;i<7;i++) {
             fourthRow.children[i].textContent = dayValue;
             if(currentDayShown == true && currentDayValue == dayValue) {
-                fourthRow.children[i].style.border = '2px solid blue';
+                fourthRow.children[i].style.border = '2px solid black';
                 fourthRow.children[i].style.fontWeight = 'bold';    
             }  else {
                 fourthRow.children[i].style = null;
@@ -143,7 +143,7 @@
         for(i=0;i<7 && dayValue<=indexOfLastDayOfTheMonth;i++) {
             fifthRow.children[i].textContent = dayValue;
             if(currentDayShown == true && currentDayValue == dayValue) {
-                fifthRow.children[i].style.border = '2px solid blue';
+                fifthRow.children[i].style.border = '2px solid black';
                 fifthRow.children[i].style.fontWeight = 'bold';    
             }  else {
                 fifthRow.children[i].style = null;
@@ -175,7 +175,7 @@
             for(i=0;i<7 && dayValue<=indexOfLastDayOfTheMonth;i++) {
                 sixthRow.children[i].textContent = dayValue;
                 if(currentDayShown == true && currentDayValue == dayValue) {
-                    sixthRow.children[i].style.border = '2px solid blue';
+                    sixthRow.children[i].style.border = '2px solid black';
                     sixthRow.children[i].style.fontWeight = 'bold';    
                 }  else {
                     sixthRow.children[i].style = null;
