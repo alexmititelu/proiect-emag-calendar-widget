@@ -5,8 +5,10 @@
     currentDayShown = false;
     currentDayValue = currentDate.getDay();
 
+
+    // initializeLocation();
     span = document.getElementById("monthDisplayed");
-    txt = document.createTextNode(months[currentDate.getMonth()-1] + " " + currentDate.getFullYear());
+    txt = document.createTextNode(months[currentDate.getMonth()] + " " + currentDate.getFullYear());
     span.appendChild(txt);
         
     currentMonth = months.indexOf(document.getElementById("monthDisplayed").firstChild.nodeValue.split(" ")[0]);
@@ -16,12 +18,12 @@
     
     function resetCalendarHeader() {
         span.firstChild.nodeValue = months[currentMonth] + " " + currentYear;
-        resetCalendarContent();
         currentDayShown = markCurrentDay();
+        resetCalendarContent();
     }
 
     function markCurrentDay() {
-        if(currentMonth == months.indexOf(currentDate.getMonth()) && currentYear == currentDate.getFullYear()) {
+        if(currentMonth == currentDate.getMonth() && currentYear == currentDate.getFullYear()) {
             return true;
         }
         return false;
@@ -80,6 +82,7 @@
         for(i=indexOfFirstDayOfTheMonth-1;i>=0;i--) {
             firstRow.children[i].textContent = lastDayOfPreviousMonth;
             lastDayOfPreviousMonth--;
+            firstRow.children[i].style = '';
             firstRow.children[i].style.opacity = "0.3";
         }
 
@@ -94,6 +97,8 @@
             if(currentDayShown == true && currentDayValue == dayValue) {
                 firstRow.children[i].style.border = '2px solid blue';
                 firstRow.children[i].style.fontWeight = 'bold';    
+            }  else {
+                firstRow.children[i].style = null;
             }
             firstRow.children[i].style.opacity = "1";
             dayValue++;
@@ -104,6 +109,8 @@
             if(currentDayShown == true && currentDayValue == dayValue) {
                 secondRow.children[i].style.border = '2px solid blue';
                 secondRow.children[i].style.fontWeight = 'bold';    
+            }    else {
+                secondRow.children[i].style = null;
             }
             secondRow.children[i].style.opacity = "1";
             dayValue++;
@@ -114,6 +121,8 @@
             if(currentDayShown == true && currentDayValue == dayValue) {
                 thirdRow.children[i].style.border = '2px solid blue';
                 thirdRow.children[i].style.fontWeight = 'bold';    
+            }  else {
+                thirdRow.children[i].style = null;
             }
             thirdRow.children[i].style.opacity = "1";
             dayValue++;
@@ -123,6 +132,8 @@
             if(currentDayShown == true && currentDayValue == dayValue) {
                 fourthRow.children[i].style.border = '2px solid blue';
                 fourthRow.children[i].style.fontWeight = 'bold';    
+            }  else {
+                fourthRow.children[i].style = null;
             }
             fourthRow.children[i].style.opacity = "1";
             dayValue++;
@@ -134,6 +145,8 @@
             if(currentDayShown == true && currentDayValue == dayValue) {
                 fifthRow.children[i].style.border = '2px solid blue';
                 fifthRow.children[i].style.fontWeight = 'bold';    
+            }  else {
+                fifthRow.children[i].style = null;
             }
             dayValue++;
             fifthRow.children[i].style.opacity = "1";
@@ -145,6 +158,7 @@
 
             for(i=lastIndexWrote+1;i<7;i++) {
                 fifthRow.children[i].textContent = dayOfNextMonth;
+                fifthRow.children[i].style = '';
                 fifthRow.children[i].style.opacity = "0.3";
                 dayOfNextMonth++;
             }
@@ -163,6 +177,8 @@
                 if(currentDayShown == true && currentDayValue == dayValue) {
                     sixthRow.children[i].style.border = '2px solid blue';
                     sixthRow.children[i].style.fontWeight = 'bold';    
+                }  else {
+                    sixthRow.children[i].style = null;
                 }
                 sixthRow.children[i].style.opacity = "1";
                 dayValue++;
@@ -173,6 +189,7 @@
 
             for(i=lastIndexWrote+1;i<7;i++) {
                 sixthRow.children[i].textContent = dayOfNextMonth;
+                sixthRow.children[i].style = '';
                 sixthRow.children[i].style.opacity = "0.3";
                 dayOfNextMonth++;
             }
@@ -202,5 +219,4 @@
         }
         return lastDay;
     }
-    // createCal.cache = {}; 
-   
+    

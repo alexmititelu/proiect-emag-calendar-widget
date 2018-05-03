@@ -44,33 +44,67 @@
 
 .dayNames {
     background: rgba(216, 216, 216, 0.872);
+    width: 235px;
 }
 
 
 .dayName {
     width: 27px;
     font-size: 13px;
-    display: inline-block;
+    font-weight: bold;
+    /* display: inline-block; */
+    display: table-cell;
     /* padding: 0.2px; */
     /* margin-right: 2px; */
 }
 
 .calendarContent {
+    width: 235px;
     border: 1px solid; 
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
+    border-spacing: 0px;
     border-color: black;
 }
 
 .calendarContent tr {
     border: 1px solid;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
     border-color: rgba(176, 172, 172, 0.8);
 }
 
 
 .calendarContent td {
     width: 28.1px;
+    display: table-cell;
     border: 1px solid;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
     border-color: rgba(176, 172, 172, 0.8);
 }
+
+
+.calendarContent td:hover { 
+    cursor : pointer;
+    /* border: 1px solid; */
+    /* border-collapse: collapse; */
+
+    /* border-color: blue; */
+    background-color: rgb(154, 166, 238);
+ }
+
+ .clock {
+     float:left;
+    padding-left: 15px;
+ }
+ 
+ .clockValue {
+     float:left;
+     padding-left: 5px;
+ }
+
+ .locationValue {
+     padding-left:35px;
+ }
+
+ .weather {
+     padding-left:60px;
+ }
