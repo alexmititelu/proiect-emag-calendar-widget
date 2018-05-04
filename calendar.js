@@ -205,7 +205,7 @@
         fullMonths = ["January", "March", "May", "July", "August", "October", "December"];
         semiFullMonths = ["April","June","September","November"];
         lastDay = 0;
-        [0,3,5,7,8,10,12]
+        // [0,3,5,7,8,10,12]
         if(fullMonths.indexOf(months[month]) != -1) {
             lastDay = 31;
         } else if(semiFullMonths.indexOf(months[month]) != -1) {

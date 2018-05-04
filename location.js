@@ -29,7 +29,7 @@ function setCurrentHour() {
 }
 
 
-setInterval('setCurrentHour()',500); 
+setInterval(setCurrentHour,500); 
 
 var geocoder;
 var lat = '';
@@ -115,7 +115,7 @@ locationValue = '';
     }
    
     
-     // weather();
+    //  weather();
     
     
    

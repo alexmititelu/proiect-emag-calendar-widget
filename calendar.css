@@ -122,3 +122,7 @@
  .weather {
      padding-left:60px;
  }
+
+ .notes {
+     display: inline;
+ }
